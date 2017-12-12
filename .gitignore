@@ -1,3 +1,5 @@
 node_modules/
 public/scripts/
-/public/bundle.js
+public/bundle.js
+public/bundle.js.map
+.idea
