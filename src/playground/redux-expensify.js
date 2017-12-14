@@ -69,7 +69,6 @@ const setEndDate = (endDate) => ({
 });
 
 // Expenses reducer
-
 const expensesReducerDefaultState = [];
 
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
@@ -98,7 +97,6 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
 };
 
 // Filters reducer
-
 const filtersReducerDefaultState = {
     text: "",
     sortBy: "date",
