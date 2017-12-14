@@ -16,11 +16,11 @@ const store = configureStore();
 store.dispatch(addExpense({description: "Water bill", amount: 4300}));
 store.dispatch(addExpense({description: "Gas bill", amount: 12300}));
 
-store.dispatch(setTextFilter('water'));
-
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'));
-}, 3000);
+// store.dispatch(setTextFilter('water'));
+//
+// setTimeout(() => {
+//     store.dispatch(setTextFilter('bill'));
+// }, 3000);
 
 const currentState = store.getState();
 const visibleExpenses = getVisibleExpenses(currentState.expenses, currentState.filters);
