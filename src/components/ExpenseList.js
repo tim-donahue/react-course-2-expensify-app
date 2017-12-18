@@ -5,19 +5,19 @@ import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 const ExpenseList = (props) => (
-    <div>
-        <h1>ExpenseList Component</h1>
+  <div>
+    <h1>ExpenseList Component</h1>
 
-        {props.expenses.map((expense) => (
-            <ExpenseListItem key={expense.id} {...expense} />
-        ))}
-    </div>
+    {props.expenses.map((expense) => (
+      <ExpenseListItem key={expense.id} {...expense} />
+    ))}
+  </div>
 );
 
 const mapStateToProps = (state) => {
-    return {
-        expenses: selectExpenses(state.expenses, state.filters)
-    };
+  return {
+    expenses: selectExpenses(state.expenses, state.filters)
+  };
 };
 
 export default connect(mapStateToProps)(ExpenseList);

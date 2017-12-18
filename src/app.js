@@ -29,9 +29,9 @@ store.dispatch(addExpense({description: "Rent", amount: 109500}));
 // console.log(visibleExpenses);
 
 const jsx = (
-    <Provider store={store}>
-        <AppRouter />
-    </Provider>
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));
