@@ -53,7 +53,6 @@ export default class ExpenseForm extends React.Component {
     e.preventDefault();
 
     if (!this.state.description || !this.state.amount ) {
-      console.log("error");
       this.setState(() => ({
         error: 'Please provide description and amount'
       }));
@@ -74,7 +73,7 @@ export default class ExpenseForm extends React.Component {
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}
-        <form>
+        <form onSubmit={this.onSubmit}>
           <input
             type="text"
             placeholder="Description"
@@ -103,7 +102,7 @@ export default class ExpenseForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <button onClick={this.onSubmit}>Add Expense</button>
+          <button>Add Expense</button>
         </form>
       </div>
     );
