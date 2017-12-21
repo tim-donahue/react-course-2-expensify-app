@@ -2,4 +2,6 @@ node_modules/
 public/scripts/
 public/bundle.js
 public/bundle.js.map
+public/styles.css
+public/styles.css.map
 .idea
